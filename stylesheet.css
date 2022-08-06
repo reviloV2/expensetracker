@@ -1,0 +1,128 @@
+@import url(https://fonts.google.com/specimen/DM+Sans);
+
+*{
+    font-family:'DM Sans', sans-serif;
+}
+
+body{
+    background-color:hsl(27, 66%, 92%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expenseapp{
+    width:500px;
+}
+
+/* BALANCE BAR SECTION*/
+
+.balance{
+    color:white;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row-reverse;
+    font-size: 18px;
+    padding:35px;
+    background-color:hsl(10, 79%, 65%);
+    margin-bottom:20px;
+border-radius:10px;
+height:50px;
+}
+
+.balancetext{
+    margin:0;
+}
+
+.balnumber{
+    margin-top:10px;
+    font-weight:700;
+    font-size:30px;
+}
+
+
+/*GRAPH SECTION*/
+
+.appbody{
+    background-color: white;
+    padding:35px;
+    border-radius:10px;
+    height:450px;
+    color:hsl(25, 47%, 15%);
+}
+
+.flexwrap{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    margin-top:25px;
+}
+
+.balancetext2{
+    color:hsl(28, 10%, 53%);
+}
+
+.balnumber2{
+    font-size:40px;
+    font-weight:700;
+    margin:0;
+}
+
+.percent{
+    font-weight:700;
+    margin-top:55px;
+    margin-bottom:0px;
+    text-align: right;
+}
+
+.lastmonth{
+    margin:0;
+    color:hsl(28, 10%, 53%);
+}
+
+.attribution{
+    margin-top:20px;
+}
+
+@media (max-width:375px){
+    .expenseapp{
+        width:250px;
+        font-size:0.6rem;
+    
+    }
+
+    .balnumber2{
+        font-size:25px;
+    }
+
+    .percent{
+        font-weight:700;
+        margin-top:35px;
+        margin-bottom:0px;
+        text-align: right;
+    }
+
+    .balance{
+        color:white;
+        display: flex;
+        justify-content:space-between;
+        flex-direction: row-reverse;
+        font-size: 15px;
+        padding:25px;
+        background-color:hsl(10, 79%, 65%);
+        margin-bottom:20px;
+    border-radius:10px;
+    height:50px;
+    }
+
+    .balnumber{
+        margin-top:10px;
+        font-weight:700;
+        font-size:20px;
+    }
+
+    .appbody{
+        height:210px;
+    }
+}

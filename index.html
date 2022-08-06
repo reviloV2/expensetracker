@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./stylesheet.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+<section class="expenseapp">
+
+  <div class="balance">
+    <img src="./logo.svg" alt="logo">
+    <div class="textwrap">
+  <p class="balancetext">My balance</p>
+  <p class="balnumber">£921.48</p>
+</div>
+</div>
+<div class="appbody">
+  <h1>Spending - Last 7 days</h1>
+<div class="graph">
+  <canvas id="myChart">
+    
+    <script>
+      const labels = [
+        'Mon',
+        'Tue',
+        'Wed',
+        'Thu',
+        'Fri',
+        'Sat',
+        'Sun',
+      ];
+    
+      const data = {
+        labels: labels,
+        datasets: [{
+          label: 'Expenses',
+          backgroundColor: 'hsl(10, 79%, 65%)',
+          borderColor: 'hsl(10, 79%, 65%)',
+          data: [28, 10, 5, 2, 20, 30, 26],
+        }]
+      };
+    
+      const config = {
+        type: 'bar',
+        data: data,
+        options: {}
+      };
+    </script>
+    
+  </canvas>
+
+  <hr>
+</div>
+
+<div class="flexwrap">
+<div class="textwrap2">
+  <p class="balancetext2">Total this month</p>
+  <p class="balnumber2">£478.33</p>
+</div>
+<div>
+<p class="percent"> +2.4% </p> 
+  <p class="lastmonth">from last month</p> 
+</div>
+</div>
+
+</div>
+
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Oliver</a>.
+</div>
+
+</section>
+  
+
+
+  <script>
+    const myChart = new Chart(
+    document.getElementById('myChart'),
+      config
+    );
+  </script>
+
+</body>
+</html>
